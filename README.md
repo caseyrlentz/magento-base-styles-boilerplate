@@ -63,3 +63,6 @@ When adding new variable declarations, be mindful to use abstract variable names
 
 Base64 fonts can be added at the bottom of `typography.scss`. When possible, use a common `font-family` name at various `weights` instead of a naming convention like: `font-family: 'Example-Bold'`. 
 
+**6. `_imports.scss`
+
+The contents of `_imports.scss` should be included at the top of every stylesheet that is added to the theme. In order to ensure that styles are not duplicated across every stylesheet, only **variables and placeholder selectors** can be used within the contents of `_imports.scss`.
