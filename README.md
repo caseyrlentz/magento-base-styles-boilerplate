@@ -33,6 +33,8 @@ This project is designed to streamline the process of setting up Magento's base 
                 `-- /src
                     `-- /scss
                         |-- /imports
+                        |   |-- _extends.scss
+                        |   `-- _variables.scss
                         |-- _imports.scss
                         |-- account.scss
                         |-- base.scss
