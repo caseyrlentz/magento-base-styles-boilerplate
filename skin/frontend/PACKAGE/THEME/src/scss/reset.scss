@@ -1,0 +1,173 @@
+@import 'imports';
+/*******************************************************************************
+* Style Resets
+*******************************************************************************/
+
+/*******************************************************************************
+* Titles
+*******************************************************************************/
+.block-title {
+    border-top: 0;
+}
+
+/*******************************************************************************
+* Inputs
+*******************************************************************************/
+// Remove left margin/padding from inputs with indentation
+.form-list .control input.radio,
+.form-list .control input.checkbox,
+.sp-methods dt input.radio,
+.sp-methods dt input.checkbox,
+#checkout-shipping-method-load .sp-methods dd input.radio,
+#checkout-shipping-method-load .sp-methods dd input.checkbox,
+#co-shipping-method-form .sp-methods dd input.radio,
+#co-shipping-method-form .sp-methods dd input.checkbox,
+.product-options ul.options-list input.radio,
+.product-options ul.options-list input.checkbox {
+    margin-left: 0;
+}
+.form-list .control label,
+.sp-methods dt label,
+#checkout-shipping-method-load .sp-methods dd label,
+#co-shipping-method-form .sp-methods dd label,
+.product-options ul.options-list label {
+    padding-left: 25px;
+}
+// Remove background
+.shipping #co-shipping-method-form .sp-methods dd label,
+.form-list .control label,
+.sp-methods dt label,
+#checkout-shipping-method-load .sp-methods dd label,
+#co-shipping-method-form .sp-methods dd label,
+.product-options ul.options-list label {
+    // background-color: $bg-form-label;
+    background-color: transparent;
+    border: none;
+    &:hover {
+        // background-color: darken($bg-form-label, 2%);
+        background-color: transparent;
+    }
+}
+
+/*******************************************************************************
+* Header
+*******************************************************************************/
+#header-nav {
+    border-bottom: none;
+}
+
+/*******************************************************************************
+* Cart
+*******************************************************************************/
+.cart-table {
+    button {
+        &[style*='visibility:hidden'] {
+            position: absolute;
+        }
+    }
+    thead,
+    tfoot {
+        tr {
+            border-bottom: none;
+        }
+    }
+}
+
+/*******************************************************************************
+* CMS Pages styles
+*******************************************************************************/
+
+// Not accounted for in default Magento.
+// Needs to be added to "Standard Formatted Text Block"
+// Commented out styles have been moved to typography.scss
+
+.std ul ul,
+.std ul ol,
+.std ol ol,
+.std ol ul {
+    margin-bottom: 0;
+}
+.std blockquote {
+    margin: 0 0 1.5em 40px;
+}
+.std p + ul,
+.std p + ol,
+.std p + dl,
+.std p + blockquote {
+    margin-top: -1em;
+}
+.std dl {
+    margin: 0 0 1.5em;
+}
+// .std dl {
+//     color: #636363;
+//     font-family: $f-body;
+//     font-size: 14px;
+//     font-style: italic;
+//     line-height: 24px;
+// }
+.std dt {
+    font-weight: 700;
+}
+.std dd {
+    margin-left: 40px;
+}
+.std table {
+    margin: 0 0 1.5em;
+}
+.std table caption {
+    margin: 0 0 3px 1px;
+}
+.std table th,
+.std table td {
+    border: 1px solid #636363;
+    border-left-width: 0;
+    border-top-width:0;
+    padding: .5em;
+    text-align: left;
+}
+// .std table th,
+// .std table td {
+//     color: #636363;
+//     font-family: $f-body;
+//     font-size: 14px;
+//     font-style: italic;
+//     line-height: 1.5;
+// }
+.std table th:first-child,
+.std table td:first-child {
+    border-left-width: 1px;
+}
+.std table tr:first-child th,
+.std table tr:first-child td {
+    border-top-width: 1px;
+}
+// .std table th {
+//     font-weight: 700;
+//     text-align: left;
+// }
+// .std table tfoot th {
+//     font-size: 0.875em;
+// }
+// // italics look stupid
+// .std p,
+// .std li,
+// .std dl,
+// .std th,
+// .std td,
+// .cms-page-view .std p,
+// .cms-page-view .std li,
+// .cms-page-view .std dl,
+// .cms-page-view .std th,
+// .cms-page-view .std td {
+//     font-style: normal;
+// }
+
+/*******************************************************************************
+* Account Pages
+*******************************************************************************/
+.dashboard .box-account,
+.storecredit .account-balance {
+    border-bottom: 0;
+}
+

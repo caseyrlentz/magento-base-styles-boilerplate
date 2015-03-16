@@ -1,0 +1,64 @@
+@import 'imports';
+/*******************************************************************************
+* Sprites
+*******************************************************************************/
+// Default Magento sprite selectors - rwd/default
+.icon-sprite,
+.btn-remove2,
+.ratings .rating-box,
+.ratings .rating-box .rating,
+.sorter > .sort-by .sort-by-switcher,
+.sorter > .view-mode .grid,
+.sorter > .view-mode .list,
+.skip-nav .icon,
+.skip-search .icon,                                         // mobile
+#search_mini_form .search-button:before,                    // desktop
+.skip-account .icon,
+.skip-cart .icon,
+.product-view .sharing-links a,
+.review-summary-table .rating-box .rating-number:after,
+.ratings-table .rating-box,
+.ratings-table .rating-box .rating {
+
+}
+
+/* Custom sprites */
+%custom-sprite {
+    // background-image: url(../images/custom_sprite.png);
+}
+@media #{$mq-retina} {
+    %custom-sprite {
+        // background-image: url(../images/custom_sprite@2x.png);
+    }
+}
+
+// Example override with nested media query
+// .skip-account .icon {
+//     @extend %custom-sprite;
+//     background-position: 4px -44px;
+//     @include retina {
+//         background-position: 4px -44px;
+//     }
+// }
+
+// Example overrides with separated media query block
+// #search_mini_form .search-button:before,
+// .skip-cart .icon {
+//     @extend %custom-sprite;
+// }
+
+// #search_mini_form .search-button:before {
+//     background-position: 4px -146px;
+// }
+// .skip-cart .icon {
+//     background-position: 0px -95px;
+// }
+
+// @media #{$mq-retina} {
+//     #search_mini_form .search-button:before {
+//         background-position: 4px -146px;
+//     }
+//     .skip-cart .icon {
+//         background-position: 0px -95px;
+//     }
+// }

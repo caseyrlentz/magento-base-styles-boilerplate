@@ -1,0 +1,43 @@
+@import 'imports';
+/*******************************************************************************
+* Product styles
+*******************************************************************************/
+h2.product-name,
+h3.product-name,
+h4.product-name,
+h5.product-name,
+p.product-name {
+    font-family: $f-subheader;
+    a {
+        color: $t-subheader;
+        text-decoration: none;
+        &:hover {
+            color: $t-link-hover;
+        }
+    }
+}
+
+.products-grid .product-name,
+.products-list .product-name {
+    font-family: $f-subheader;
+}
+
+.product-image,
+.no-touch .product-img-box .product-image:not(.zoom-available):hover {
+    border: none;
+    // border-color: $border-body;
+}
+.no-touch .product-image:hover {
+    border: none;
+    // border-color: $border-body;
+}
+
+.price-box .price,
+.price {
+    font-family: $f-body;
+    color: $t-price;
+}
+.price-box .price-label {
+    font-family: $f-body;
+    color: $t-body;
+}

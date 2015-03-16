@@ -1,0 +1,137 @@
+@import 'imports';
+/*******************************************************************************
+* Customer Account styles
+*******************************************************************************/
+body {
+    &[class*='customer-account'] {
+        .main-wrapper {
+            padding: 50px 0;
+            @media screen and (max-width: 770px) {
+                padding: 0;
+            }
+        }
+    }
+}
+
+/*******************************************************************************
+* Typography styles
+*******************************************************************************/
+body.customer-account .data-table td a {
+    font-family: $f-form;
+}
+
+// Block titles
+.block-account {
+    .block-title strong {
+        font-family: $f-block-title;
+        font-size: 18px;
+    }
+}
+
+// Dashboard
+.dashboard .box-account p,
+.dashboard .box-account address {
+    font-family: $f-body;
+    font-style: normal;
+}
+.dashboard .box-title a,
+.dashboard .box-head a {
+    color: $t-link;
+    &:hover {
+        color: $t-link-hover;
+    }
+}
+
+// Address
+.my-account .addresses-list {
+    font-family: $f-body;
+}
+
+// Tags
+.tags-list {
+    font-size: 20px;
+}
+
+
+/*******************************************************************************
+* Block Titles
+*******************************************************************************/
+.block-account,
+.block-list {
+    border: 1px solid $border-body;
+    .block-title {
+        background-color: $bg-main-inverse;
+        padding: 10px 15px;
+        strong {
+            color: $t-inverse;
+
+            &:before {
+                content: '//';
+                color: $t-accent;
+                margin-right: 5px;
+            }
+        }
+    }
+    .block-content {
+        padding-top: 5px;
+        padding-left: 30px;
+        padding-bottom: 10px;
+    }
+}
+
+/*******************************************************************************
+* Form styles
+*******************************************************************************/
+.customer-account-create .fieldset,
+.customer-account-create .buttons-set,
+.customer-account-forgotpassword .fieldset,
+.customer-account-forgotpassword .buttons-set {
+    margin-left: 0;
+}
+.account-create {
+    form {
+        // margin-top: 20px;
+    }
+}
+
+/*******************************************************************************
+* Guest Account styles
+*******************************************************************************/
+.sales-guest-form {
+    .main-wrapper {
+        padding: 50px 0;
+    }
+}
+
+/*******************************************************************************
+* Custom styles
+*******************************************************************************/
+.my-account {
+    form {
+        padding: 10px;
+    }
+}
+
+// Tags
+.tags-list {
+    margin-top: 10px;
+}
+
+// Gift Card
+.my-account {
+    .check-gc-status {
+        margin-top: 20px;
+        padding-right: 0;
+    }
+}
+
+// Gift Registry
+.gift-registry-actions {
+    a {
+        display: block;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

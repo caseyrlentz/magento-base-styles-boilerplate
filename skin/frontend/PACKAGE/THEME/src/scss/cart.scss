@@ -1,0 +1,201 @@
+@import 'imports';
+/*******************************************************************************
+* Cart styles
+*******************************************************************************/
+
+/*******************************************************************************
+* Typography
+*******************************************************************************/
+
+.cart-forms .giftcard,
+.cart-forms .shipping,
+#discount-coupon-form {
+    h2 {
+        font-family: $f-block-title;
+        font-size: 18px;
+    }
+}
+// Table
+.cart-table {
+    font-family: $f-form;
+    .product-cart-sku {
+        font-family: $f-form;
+        font-style: normal;
+    }
+}
+.cart-table thead th,
+.cart-table tbody td {
+    font-family: $f-block-title;
+    font-size: 18px;
+    font-weight: 700;
+}
+.cart .cart-totals table {
+    font-family: $f-block-title;
+    font-size: 16px;
+    font-weight: 700;
+    tfoot strong {
+        font-weight: 700;
+    }
+}
+
+/*******************************************************************************
+* Page Title
+*******************************************************************************/
+.cart {
+    .page-title {
+        &.title-buttons {
+            @extend %container;
+            background-color: $bg-title;
+            border: none;
+            margin-bottom: 20px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            text-align: right;
+        }
+        h1 {
+            float: left;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            top: 5px;
+        }
+        .checkout-types {
+            display: inline-block;
+            float: none;
+            vertical-align: middle;
+            li {
+                margin: 0;
+            }
+        }
+    }
+}
+// @media screen and (max-width: #{$tablet-width}) {
+@media screen and (max-width: 650px) {
+    .cart {
+        .page-title {
+            h1,
+            .checkout-types {
+                display: block;
+            }
+            h1 {
+                margin-bottom: 20px;
+                text-align: center;
+                width: 100%;
+            }
+        }
+    }
+}
+
+/*******************************************************************************
+* (Not a) Button
+*******************************************************************************/
+.cart .btn-empty {
+    @extend %not-btn;
+    padding-left: 0;
+    span span {
+        border-bottom: 1px solid $t-link-underline;
+    }
+    &:hover {
+        span span {
+            border-bottom: 1px solid $t-accent;
+            color: $t-link-hover;
+        }
+    }
+}
+#giftcard-form .check-gc-status {
+    @extend %not-btn;
+    span span {
+        border-bottom: 1px solid $t-link-underline;
+        color: $t-body;
+        margin-top: 20px;
+    }
+    &:hover {
+        span span {
+            color: $t-link-hover;
+            border-bottom: 1px solid $t-link-underline;
+        }
+    }
+}
+
+/*******************************************************************************
+* Cart Table
+*******************************************************************************/
+.cart-table {
+    &.data-table thead th,
+    &.data-table tbody td {
+        border: none;
+        &.last {
+            border-right: 1px solid $border-form;
+        }
+        &:last-child {
+            border-right: 1px solid $border-form;
+        }
+    }
+    thead {
+        background-color: $bg-form-title;
+        border: 1px solid $border-form;
+        border-bottom: none;
+        tr {
+            border-right: 1px solid black;
+        }
+        th {
+            &:first-child {
+                padding-left: 10px;
+            }
+        }
+    }
+    tbody {
+        border-left: 1px solid $border-form;
+    }
+}
+
+/*******************************************************************************
+* Cart Forms - discount, gift cards, shipping
+*******************************************************************************/
+.cart-forms .discount,
+.cart-forms .giftcard,
+.cart-forms .shipping {
+    background-color: $bg-form;
+    border: 1px solid $border-body;
+    padding: 0;
+}
+.cart-forms .giftcard,
+.cart-forms .shipping,
+#discount-coupon-form {
+    h2 {
+        background-color: $bg-form-title;
+        color: $t-form;
+        display: block;
+        padding: 10px 15px;
+    }
+}
+.cart-forms .giftcard,
+#discount-coupon-form {
+    label {
+        display: none;
+    }
+}
+#discount-coupon-form .input-text,
+.cart-forms .giftcard .input-text {
+    width: 190px;
+}
+.cart-forms {
+    .discount-form,
+    #giftcard-form,
+    .shipping-form {
+        padding-top: 5px;
+        padding-left: 30px;
+        padding-bottom: 10px;
+    }
+}
+
+/*******************************************************************************
+* Price Totals
+*******************************************************************************/
+.cart-totals {
+    background-color: $bg-form-input;
+    border: none;
+}
+.cart .cart-totals table tfoot {
+    border-bottom: none;
+}

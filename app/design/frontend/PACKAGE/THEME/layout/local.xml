@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <!-- Default view -->
+    <default>
+        <reference name="root">
+            <reference name="head">
+                <action method="addItem"><type>skin_css</type><name>css/reset.css</name><params/><if><![CDATA[<!--[if (gte IE 7)]><!-->]]></if></action>
+                <action method="addItem"><type>skin_css</type><name>css/base.css</name><params/><if><![CDATA[<!--[if (gte IE 7)]><!-->]]></if></action>
+                <action method="addItem"><type>skin_css</type><name>css/typography.css</name><params/><if><![CDATA[<!--[if (gte IE 7)]><!-->]]></if></action>
+                <action method="addItem"><type>skin_css</type><name>css/sprites.css</name><params/><if><![CDATA[<!--[if (gte IE 7)]><!-->]]></if></action>
+
+                <action method="addItem"><type>skin_css</type><name>css/header.css</name><params/><if><![CDATA[<!--[if (gte IE 7)]><!-->]]></if></action>
+                <action method="addItem"><type>skin_css</type><name>css/footer.css</name><params/><if><![CDATA[<!--[if (gte IE 7)]><!-->]]></if></action>
+                <action method="addItem"><type>skin_css</type><name>css/buttons.css</name><params/><if><![CDATA[<!--[if (gte IE 7)]><!-->]]></if></action>
+                <action method="addItem"><type>skin_css</type><name>css/forms.css</name><params/><if><![CDATA[<!--[if (gte IE 7)]><!-->]]></if></action>
+
+                <action method="addItem"><type>skin_css</type><name>css/account.css</name><params/><if><![CDATA[<!--[if (gte IE 7)]><!-->]]></if></action>
+                <action method="addItem"><type>skin_css</type><name>css/cart.css</name><params/><if><![CDATA[<!--[if (gte IE 7)]><!-->]]></if></action>
+                <action method="addItem"><type>skin_css</type><name>css/product.css</name><params/><if><![CDATA[<!--[if (gte IE 7)]><!-->]]></if></action>
+            </reference>
+        </reference>
+    </default>
+</layout>

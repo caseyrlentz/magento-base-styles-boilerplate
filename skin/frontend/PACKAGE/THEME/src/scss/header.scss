@@ -1,0 +1,106 @@
+@import 'imports';
+/*******************************************************************************
+* Header styles
+*******************************************************************************/
+// Language & Welcome Message container
+.header-language-background {
+    background-color: $bg-accent;
+    color: $t-header;
+}
+// Header
+.page-header {
+    background-color: $bg-header-inverse;
+}
+// Branding
+.logo {
+    &:hover {
+        opacity: 1;
+    }
+}
+
+/*******************************************************************************
+* Header typography
+*******************************************************************************/
+
+.header-language-container,
+.page-header {
+    font-family: $f-header;
+}
+
+// Skip links
+#header-account a {
+    color: $t-body;
+    &:hover {
+        color: $t-link-hover;
+    }
+}
+.minicart-wrapper {
+    color: $t-header;
+}
+.header-minicart .block-subtitle {
+    color: $t-header;
+}
+.header-minicart #minicart-error-message {
+    @extend %error;
+}
+.header-minicart #minicart-success-message {
+    @extend %success;
+}
+
+// Search
+#search {
+    font-family: $f-body;
+}
+
+// Breadcrumbs
+.breadcrumbs {
+    li {
+        font-family: $f-body;
+        // font-size: 12px;
+    }
+    a {
+        color: $t-link;
+        text-decoration: none;
+        &:hover {
+            color: $t-link-hover;
+        }
+    }
+    strong {
+        color: $t-body;
+    }
+}
+
+// Messages
+%success,
+.success {
+    color: $t-success;
+}
+%notice,
+.notice {
+    color: $t-notice;
+}
+%error,
+.error {
+    color: $t-error;
+}
+.cms-page-view .std .messages li,
+.cms-home .std .messages li,
+.cms-no-route .std .messages li {
+    font-family: $f-body;
+}
+
+/*******************************************************************************
+* Breadcrumbs
+*******************************************************************************/
+.breadcrumbs {
+    background-color: $bg-breadcrumbs;
+    margin: auto;
+    overflow: initial;
+    ul {
+        @extend %container;
+        @extend %clearfix;
+        margin: auto;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}

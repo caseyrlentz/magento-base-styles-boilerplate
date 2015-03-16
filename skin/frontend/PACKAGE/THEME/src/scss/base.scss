@@ -1,0 +1,51 @@
+@import 'imports';
+/*******************************************************************************
+* Base styles
+*******************************************************************************/
+.wrapper {
+    background-color: $bg-main-inverse;
+}
+.main-wrapper {
+    background-color: $bg-main;
+    padding: 50px 0;
+}
+.main-container {
+    background-color: $bg-main;
+    min-height: 300px;
+    padding: 0;
+    @include mobile {
+        min-height: 100px;
+    }
+}
+
+/*******************************************************************************
+* Alerts & Messages
+*******************************************************************************/
+
+.messages {
+    .success-msg li,
+    .notice-msg li,
+    .error-msg li {
+        background-color: transparent;
+        border: 1px solid;
+        border-left-width: 5px;
+    }
+    .success-msg li {
+        border-color: $border-success;
+        &:before {
+            border-left-color: $border-success;
+        }
+    }
+    .notice-msg li {
+        border-color: $border-notice;
+        &:before {
+            border-left-color: $border-notice;
+        }
+    }
+    .error-msg li {
+        border-color: $border-error;
+        &:before {
+            border-left-color: $border-error;
+        }
+    }
+}

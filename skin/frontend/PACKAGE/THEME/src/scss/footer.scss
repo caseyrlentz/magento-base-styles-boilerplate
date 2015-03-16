@@ -1,0 +1,37 @@
+@import 'imports';
+/*******************************************************************************
+* Footer styles
+*******************************************************************************/
+.footer-container {
+    background-color: $bg-footer-inverse;
+}
+.footer {
+    border-top: none;
+}
+
+/*******************************************************************************
+* Footer typography
+*******************************************************************************/
+
+.footer .block-title strong {
+    color: $t-accent;
+    font-family: $f-header;
+    font-size: 14px;
+    font-weight: 600;
+}
+.footer,
+.footer button {
+    font-family: $f-header;
+}
+.footer .links a {
+    color: $t-inverse;
+    text-decoration: none;
+    &:hover {
+        color: $t-link-hover;
+    }
+}
+
+// Footer address & copyright
+.footer address {
+    color: $t-body;
+}

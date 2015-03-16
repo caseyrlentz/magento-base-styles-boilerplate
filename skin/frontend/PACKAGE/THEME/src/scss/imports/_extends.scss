@@ -1,0 +1,43 @@
+/*******************************************************************************
+* Global Extends
+*******************************************************************************/
+
+// This stylesheet is for placeholder selectors only.
+
+// Anything other than placeholders will result in duplication of styles
+// in every stylesheet that imports this file.
+
+%container {
+    max-width: 1260px;
+    padding-left: 30px;
+    padding-right: 30px;
+    @media screen and (max-width: 479px) {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+%clearfix {
+    &:after {
+        clear: both;
+        content: '';
+        display: block;
+    }
+}
+
+/*******************************************************************************
+* Not a button
+*******************************************************************************/
+%not-btn {
+    background-color: transparent;
+    background-image: none;
+    border: none;
+    border-radius: 0;
+    transition: color .2s ease;
+    &:active,
+    &:focus,
+    &:hover {
+        background-color: transparent;
+        background-image: none;
+        border: none;
+    }
+}

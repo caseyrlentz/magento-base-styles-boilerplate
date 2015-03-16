@@ -1,0 +1,64 @@
+--------------------------------
+| DO Gulp build for Magento EE |
+--------------------------------
+
+Initial setup
+-------------
+(only one team member needs to do this setup)
+
+1. Global dependencies
+    node.js     http://nodejs.org/
+    gulp        sudo npm install -g gulp
+    sass        sudo gem install sass
+2. Create file structure
+    /
+    |-- /gulp
+    |   |--gulpfile.js
+    |   `--package.json
+    |
+    `-- /skin/frontend/PACKAGE/THEME
+        |-- /css
+        |-- /images
+        |-- /js
+        `-- /src
+            `-- /scss
+3. Add the following object to the package.json file in gulp folder.
+    {
+      "devDependencies": {
+        "browser-sync": "^2.2.0",
+        "gulp": "^3.8.11",
+        "gulp-autoprefixer": "^2.1.0",
+        "gulp-filter": "^2.0.0",
+        "gulp-notify": "^2.1.0",
+        "gulp-plumber": "^0.6.6",
+        "gulp-ruby-sass": "^1.0.0-alpha.3",
+        "gulp-sourcemaps": "^1.3.0"
+      }
+    }
+4. Install dependencies. If dependencies are added for new tasks remember to use --save-dev flag!
+    $ sudo npm install
+5. Set file paths and browser support in gulpfile.js
+    All paths are relative to gulpfile.js
+    Autoprefixer browser support must be precise or the task will fail. Refer to the documentation when adding browsers. - https://github.com/ai/browserslist
+6. Update .gitignore / .svnignore
+    The repository does not need to include the node_modules directory. The dependencies are listed in package.json
+
+Bring a team member into the project
+------------------------------------
+1. Global dependencies
+    see above
+2. Clone repo
+    The repository should include:
+    - gulpfile.js
+    - package.json
+3. $ sudo npm install
+    Now everyone has the same version.
+
+Gulp Basics
+-----------
+- To run gulp 'default' task one time
+    $ gulp
+- To start gulp and continue watching
+    $ gulp watch
+- To start gulp and continue watching with BrowserSync
+    $gulp bsync

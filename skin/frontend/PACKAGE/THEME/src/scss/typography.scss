@@ -1,0 +1,222 @@
+@import 'imports';
+/*******************************************************************************
+* Typography styles
+*******************************************************************************/
+
+// If a stylesheet has been created for a section or block, place the typography in that stylesheet.
+// Otherwise place it here.
+
+// Header typography - see header.scss
+// Footer typography - see footer.scss
+// Account typography - see account.scss
+// Cart typography - see cart.scss
+// Product typography - see product.scss
+
+/*******************************************************************************
+* Base typography
+*******************************************************************************/
+body,
+button,
+input,
+label,
+select,
+table,
+textarea {
+    color: $t-body;
+    font-family: $f-body;
+    // font-size: 14px;
+    line-height: 1.4;
+}
+%f-header {
+    font-family: $f-header;
+}
+%f-subheader {
+    font-family: $f-subheader;
+}
+h1, .h1,
+h2, .h2 {
+    @extend %f-header;
+    color: $t-header;
+    font-weight: 700;
+    // line-height: 1.2;
+    // text-transform: uppercase;
+}
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+    @extend %f-subheader;
+    color: $t-subheader;
+    font-weight: 700;
+    // line-height: 1.4;
+    text-transform: none;
+}
+h1, .h1 {
+    font-size: 30px;
+}
+h2, .h2 {
+    // font-size: 24px;
+}
+h3, .h3 {
+    font-size: 20px;
+}
+h4, .h4 {
+    font-family: $f-body;
+    font-size: 18px;
+    // font-weight: 500;
+}
+h5, .h5 {
+    font-size: 16px;
+}
+h6, .h6 {
+    font-size: 14px;
+}
+a {
+    color: $t-link;
+    text-decoration: underline;
+    transition: color .2s ease;
+    &:hover {
+        color: $t-link-hover;
+        text-decoration: underline;
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+/*******************************************************************************
+* Page Title typography
+*******************************************************************************/
+
+// Page titles
+.page-title h1,
+.page-title h2,
+.product-name h1,
+.product-name .h1 {
+    border-bottom: 0;
+    color: $t-header;
+    // font-size: 24px;
+    // font-weight: 600;
+    // text-transform: uppercase;
+}
+
+// CMS page titles
+.cms-page-view .page-title h1,
+.cms-page-view .page-title h3,
+.cms-page-view .page-head h1,
+.cms-page-view .page-head h3,
+.cms-no-route .page-title h1,
+.cms-no-route .page-title h3,
+.cms-no-route .page-head h1,
+.cms-no-route .page-head h3 {
+    color: $t-header;
+}
+.cms-page-view .std h1,
+.cms-no-route .std h1 {
+    color: $t-header;
+}
+.cms-page-view .std h2,
+.cms-no-route .std h2 {
+    color: $t-header;
+}
+
+// Block titles
+.block-title {
+    h2,
+    h3,
+    strong {
+        color: $t-header;
+        font-family: $f-block-title;
+        // font-size: 14px;
+    }
+    strong {
+        font-size: 18px;
+    }
+}
+.block-account li,
+.block-cms-menu li {
+    font-family: $f-header;
+    a {
+        border-bottom: 1px solid transparent;
+        color: $t-link;
+        font-family: $f-header;
+        text-decoration: none;
+        &:hover {
+            color: $t-link;
+            border-color: $t-link-hover;
+        }
+    }
+    strong {
+        color: $t-link;
+        font-weight: 500;
+    }
+}
+body:not(.customer-account) .block:first-child .block-title {
+    padding-top: 10px;
+}
+/*******************************************************************************
+* CMS Pages typography
+*******************************************************************************/
+
+.cms-page-view .std p,
+.cms-no-route .std p {
+    color: $t-form;
+    font-family: $f-form;
+}
+.cms-page-view .std li,
+.cms-no-route .std li {
+    color: $t-form;
+    font-family: $f-form;
+}
+.std dl {
+    color: $t-form;
+    font-family: $f-form;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 24px;
+}
+.std table th,
+.std table td {
+    color: $t-form;
+    font-family: $f-form;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 1.5;
+}
+.std table th {
+    font-weight: 700;
+    text-align: left;
+}
+.std table tfoot th {
+    font-size: 0.875em;
+}
+// italics look stupid
+.std p,
+.std li,
+.std dl,
+.std th,
+.std td,
+.cms-page-view .std p,
+.cms-page-view .std li,
+.cms-page-view .std dl,
+.cms-page-view .std th,
+.cms-page-view .std td {
+    font-style: normal;
+}
+
+/*******************************************************************************
+* Tables
+*******************************************************************************/
+.data-table th,
+.data-table tbody td,
+.data-table tfoot td {
+    font-family: $f-form;
+}
+
+/*******************************************************************************
+* Custom Fonts
+*******************************************************************************/
+
+// Family:
+// Weights:
+

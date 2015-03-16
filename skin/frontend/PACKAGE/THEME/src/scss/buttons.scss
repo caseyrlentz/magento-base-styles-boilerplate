@@ -1,0 +1,169 @@
+@import 'imports';
+/*******************************************************************************
+* Global button styles
+*******************************************************************************/
+
+// See _extends.scss for %not-btn selector
+
+%btn-base {
+    border-radius: 4px;
+    font-family: $f-btn;
+    font-size: 14px;
+    // font-weight: 600;
+    outline: none;
+    // transition: background-color .5s ease;
+}
+%btn-square-left {
+    border-radius: 0 4px 4px 0;
+}
+%btn-square-right {
+    border-radius: 4px 0 0 4px;
+}
+.button {
+    &:hover {
+        text-decoration: none;
+    }
+}
+.buttons-set {
+    border-top: 0;
+    max-width: 365px;
+    a:not(.button) {
+        text-decoration: none;
+    }
+}
+
+/*******************************************************************************
+* Primary button styles
+*******************************************************************************/
+%btn-primary {
+    @extend %btn-base;
+    background-color: $bg-btn-primary;
+    background-image: $gr-btn-primary;
+    border: 1px solid $border-btn-primary;
+    color: $t-btn-primary;
+    &:active,
+    &:focus,
+    &:hover {
+        background-color: $bg-btn-primary-hover;
+        background-image: $gr-btn-primary-hover;
+        border: 1px solid $border-btn-primary-hover;
+        color: $t-btn-primary-hover;
+    }
+}
+
+input[type="submit"],
+button[type="submit"],
+button[type="button"] {
+    @extend %btn-primary;
+    padding: 7px 15px;
+    text-transform: uppercase;
+}
+.button,
+.cart-table .product-cart-actions .button,
+#co-shipping-method-form .buttons-set .button,
+.footer .button {
+    @extend %btn-primary;
+    // padding: 7px 15px;
+    &:active,
+    &:focus,
+    &:hover {
+        background-color: $bg-btn-primary-hover;
+        background-image: $gr-btn-primary-hover;
+        border: 1px solid $border-btn-primary-hover;
+        color: $t-btn-primary-hover;
+    }
+}
+
+/* Skip link: Account & Cart links */
+.skip-link {
+    @extend %btn-primary;
+    &:active,
+    &:focus,
+    &:hover {
+        // color: $t-btn-primary;
+        text-decoration: none;
+    }
+}
+/*******************************************************************************
+* Secondary button styles
+*******************************************************************************/
+%btn-secondary {
+    @extend %btn-base;
+    background-color: $bg-btn-secondary;
+    background-image: $gr-btn-secondary;
+    color: $t-btn-secondary;
+    &:active,
+    &:focus,
+    &:hover {
+        background-color: $bg-btn-secondary-hover;
+        background-image: $gr-btn-secondary-hover;
+        color: $t-btn-secondary-hover;
+    }
+}
+
+.cart .buttons-set .button,
+.cart-table .button,
+.sidebar .actions .button,
+.button.button-secondary {
+    @extend %btn-secondary;
+}
+
+/*******************************************************************************
+* Other button styles
+*******************************************************************************/
+// Change this selector name ?
+%btn-other {
+    @extend %btn-base;
+    // background-color:
+    background-image: $gr-btn-other;
+    border-color: $border-btn-other;
+    color: $t-btn-other;
+    &:active,
+    &:focus,
+    &:hover {
+        // background-color:
+        background-image: $gr-btn-other-hover;
+        border-color: $border-btn-other-hover;
+        color: $t-btn-other-hover;
+    }
+}
+
+.cart-table,
+.discount-form,
+#giftcard-form {
+    .button2 {
+        @extend %btn-other;
+        span {
+            height: auto;
+            line-height: 1;
+            span {
+                color: $t-btn-other;
+                font-family: $f-body;
+                text-decoration: none;
+                height: auto;
+                line-height: 1;
+            }
+        }
+        &:hover {
+            span span {
+                color: $t-btn-other-hover;
+            }
+        }
+    }
+}
+
+/*******************************************************************************
+* Custom button styles
+*******************************************************************************/
+.footer .block-subscribe .actions .button {
+    @extend %btn-square-left;
+}
+
+.btn-remove:after {
+    color: $t-body;
+}
+.btn-remove:hover,
+.btn-previous:hover {
+    background-color: $bg-accent;
+    border-color: $bg-accent;
+}

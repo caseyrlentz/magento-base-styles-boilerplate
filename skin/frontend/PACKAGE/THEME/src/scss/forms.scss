@@ -1,0 +1,125 @@
+@import 'imports';
+/*******************************************************************************
+* Form styles
+*******************************************************************************/
+%form-input {
+    background-color: $bg-form-input;
+    border: 1px solid $border-form;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 2px transparent,
+                0 -1px 1px transparent,
+                0 1px 0 transparent;
+    font-size: 13px;
+    transition: all .5s ease;
+    &:focus {
+        border: 1px solid $border-accent;
+        box-shadow: inset 0 1px 2px $border-accent,
+                    0 -1px 1px #fff,
+                    0 1px 0 #fff;
+        outline: none;
+    }
+}
+
+/*******************************************************************************
+* Form typography
+*******************************************************************************/
+form {
+    .legend {
+        font-family: $f-header;
+    }
+    .form-instructions {
+        font-family: $f-body;
+    }
+}
+label {
+    color: $t-form-label;
+}
+input {
+    border-radius: 4px;
+    color: $t-form-input;
+}
+input[type=email],
+input[type=search],
+input[type=number],
+input[type=password],
+input[type=tel],
+input[type=text] {
+    @extend %form-input;
+    // height: 30px;
+    // width: 365px;
+    // max-width: 100%;
+    // padding: 0 8px;
+}
+textarea {
+    @extend %form-input;
+    // box-sizing: border-box;
+    // max-width: 450px;
+    // padding: 5px;
+    resize: vertical;
+    // width: 100%;
+}
+select {
+    outline-color: $border-accent;
+    option {
+        &:checked {
+            background-color: $bg-accent;
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+.input-text {
+    @extend %form-input;
+    // appearance: none;
+}
+form .form-instructions {
+    color: $t-body;
+    font-style: normal;
+}
+
+/*******************************************************************************
+* Validation
+*******************************************************************************/
+.input-text.validation-failed {
+    border-color: $t-required;
+}
+p.required,
+.validation-advice {
+    color: $t-required;
+}
+label.required:after,
+span.required:after {
+    color: $t-required;
+}
+
+/*******************************************************************************
+* Cart
+*******************************************************************************/
+
+// Removed background and border in reset.scss
+.form-list .control label,
+.sp-methods dt label,
+#checkout-shipping-method-load .sp-methods dd label,
+#co-shipping-method-form .sp-methods dd label,
+.product-options ul.options-list label {
+    color: $t-form-label;
+}
+.shipping .sp-methods label,
+.shipping .form-list label {
+    font-family: $f-form;
+    font-style: normal;
+}
+#discount-coupon-form .input-text,
+.cart .giftcard .input-text {
+    @extend %form-input;
+}
+
+/*******************************************************************************
+* Footer
+*******************************************************************************/
+
+.footer .block-subscribe .input-text {
+    border-radius: 4px 0 0 4px;
+}

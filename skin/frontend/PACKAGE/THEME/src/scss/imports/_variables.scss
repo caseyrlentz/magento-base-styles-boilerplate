@@ -1,0 +1,175 @@
+// *****************************************************************************
+// Variables
+// *****************************************************************************
+
+// This stylesheet is for variables only.
+
+// Anything other than variables will result in duplication of styles
+// in every stylesheet that imports this file.
+
+// Fonts stacks
+// ------------
+$f-sans:        Helvetica, Arial, sans-serif;
+$f-serif:       Georgia, serif;
+
+$f-body:        '', $f-sans;
+$f-header:      '', $f-serif;
+$f-subheader:   '', $f-serif;
+$f-block-title: '', $f-serif;
+$f-btn:         '', $f-sans;
+$f-form:        '', $f-sans;
+
+// Primary color palette
+// ------------ http://chir.ag/projects/name-that-color
+$black:         #000;
+$mine-shaft:    #1e1e1e;
+$shark:         #2f3238;
+$gravel:        #484848;
+$boulder:       #525252;
+$grey:          #747474;
+$mercury:       #e5e5e5;
+$pumice:        #dedede;
+$off-white:     #f7f7f7;
+$white:         #fff;
+
+$pear:          #adbe15;
+$key-lime:      #c3d42a;
+$fruit-punch:   #dd3737;
+$orange:        #fd6023;
+$coral:         #fe7743;
+
+// Other colors
+$storm-clouds:  #474747;
+$pewter:        #626262;
+$granite-grey:  #868686;
+$citron:        #9caa22;
+$citron-dark:   #9cac00;
+$silver:        #aaa;
+$brushed-steel: #b2b2b2;
+$aluminum:      #ddd;
+
+// Color declarations
+// ------------------
+
+// Text colors
+$t-header:              $black;
+$t-subheader:           $mine-shaft;
+$t-body:                $mine-shaft;
+$t-inverse:             $white;
+
+$t-price:               $pear;
+
+$t-accent:              $key-lime;
+
+$t-link:                $black;
+$t-link-underline:      $pear;
+$t-link-hover:          $pear;
+
+$t-success:             $pear;
+$t-notice:              $orange;
+$t-error:               $fruit-punch;
+
+$t-form:                $mine-shaft;
+$t-form-title:          $mine-shaft;
+$t-form-input:          $boulder;
+$t-form-label:          $shark;
+$t-required:            $coral;
+
+// Background colors
+$bg-main:               $white;
+$bg-main-inverse:       $black;
+$bg-other:              $off-white;
+$bg-accent:             $key-lime;
+
+$bg-header:             $white;
+$bg-header-inverse:     $black;
+$bg-breadcrumbs:        $off-white;
+$bg-title:              $off-white;
+$bg-block-title:         $black;
+$bg-form-title:         $off-white;
+$bg-footer:             $white;
+$bg-footer-inverse:     $black;
+
+$bg-form:               $white;
+$bg-form-input:         $off-white;
+$bg-form-label:         $off-white;
+
+// Border colors
+$border-accent:             $key-lime;
+
+$border-nav:                $gravel;
+$border-body:               $mercury;
+$border-form:               $pumice;
+
+$border-success:            $pear;
+$border-notice:             $orange;
+$border-error:              $fruit-punch;
+
+// Buttons styles
+// --------------
+$t-btn-primary:             $white;
+$t-btn-primary-hover:       $key-lime;
+$t-btn-secondary:           $key-lime;
+$t-btn-secondary-hover:     $white;
+$t-btn-other:               $boulder;
+$t-btn-other-hover:         $white;
+
+$bg-btn-primary:            $key-lime;
+$bg-btn-primary-hover:      $storm-clouds;
+$bg-btn-secondary:          $pewter;
+$bg-btn-secondary-hover:    $key-lime;
+
+$gr-green:      linear-gradient($key-lime, #9caa22);
+$gr-black:      linear-gradient(#575757, #1d1d1d);
+$gr-white:      linear-gradient($white, #efefef);
+$gr-grey:       linear-gradient(#c6c6c6, #afafaf);
+
+$gr-btn-primary:            $gr-green;
+$gr-btn-primary-hover:      $gr-black;
+$gr-btn-secondary:          $gr-black;
+$gr-btn-secondary-hover:    $gr-green;
+$gr-btn-other:              $gr-white;
+$gr-btn-other-hover:        $gr-grey;
+
+$border-btn-primary:        $citron;
+$border-btn-primary-hover:  $storm-clouds;
+$border-btn-other:          $aluminum;
+$border-btn-other-hover:    $brushed-steel;
+
+// Media Queries
+// -------------
+$mobile-width:      480px;
+$tablet-width:      740px;
+$desktop-width:     1024px;
+$widescreen:        1280px;
+
+@mixin mobile {
+    @media (max-width: #{$mobile-width - 1px}) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
+        @content;
+    }
+}
+@mixin desktop {
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+        @content;
+    }
+}
+@mixin widescreen {
+    @media (min-width: #{$desktop-width}) {
+        @content;
+    }
+}
+// Retina displays
+$mq-retina: '(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)';
+
+@mixin retina {
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        @content;
+    }
+}
+
+

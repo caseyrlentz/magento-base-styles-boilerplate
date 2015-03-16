@@ -1,0 +1,10 @@
+// The stylesheets listed here are for placeholder selectors and variables only.
+
+// Anything other than placeholders and variables will result in duplication of styles
+// in every stylesheet that imports this file.
+
+// Variables
+@import 'imports/variables';
+
+// Extends
+@import 'imports/extends';
