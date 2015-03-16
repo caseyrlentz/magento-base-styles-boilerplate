@@ -61,5 +61,5 @@ When adding new variable declarations, be mindful to use abstract variable names
 
 **5. Update `typography.scss`**
 
-Base64 fonts can be added at the bottom of `typography.scss`. When possible, use a common `font-family` name at various `weights` instead of a naming convention like: `font-family: 'Example-Bold'. 
+Base64 fonts can be added at the bottom of `typography.scss`. When possible, use a common `font-family` name at various `weights` instead of a naming convention like: `font-family: 'Example-Bold'`. 
 
