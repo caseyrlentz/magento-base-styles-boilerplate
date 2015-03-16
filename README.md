@@ -59,7 +59,7 @@ Create the theme's color palette and update declared variable values.
 
 When adding new variable declarations, be mindful to use abstract variable names. `$bg-btn-white` is no longer useful when the color needs to be changed. `$bg-btn-primary` is descriptive and accounts for future changes. 
 
-**5. Update typography.scss`**
+**5. Update `typography.scss`**
 
 Base64 fonts can be added at the bottom of `typography.scss`. When possible, use a common `font-family` name at various `weights` instead of a naming convention like: `font-family: 'Example-Bold'. 
 
